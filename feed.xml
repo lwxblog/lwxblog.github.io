@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>lwx's blog - Articles</title>
+    <description>I blog here.</description>
+    <link>
+    </link>
+    
+      
+      <item>
+        <title>First Post</title>
+        
+          <description>&lt;p&gt;This is my first post.
+Today Pei Ngoh not good. Minus marks. Only treat din tai fung, only.&lt;/p&gt;
+</description>
+        
+        <pubDate>Mon, 09 Mar 2020 08:00:00 +0800</pubDate>
+        <link>
+        /first-post</link>
+        <guid isPermaLink="true">/first-post</guid>
+      </item>
+      
+    
+  </channel>
+</rss>

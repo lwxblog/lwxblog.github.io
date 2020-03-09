@@ -1,2 +1,0 @@
-# lwxblog.github.io
-Blog
