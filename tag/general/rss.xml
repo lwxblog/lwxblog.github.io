@@ -12,14 +12,22 @@
    <atom:link href="rss" rel="self" type="application/rss+xml" />
    
 	<item>
-	  <title>First Post</title>
-	  <link>//first-post</link>
+	  <title>Jekyll For Blogging</title>
+	  <link>//jekyll-for-blogging</link>
 	  <author></author>
 	  <pubDate>2020-03-09T08:00:00+08:00</pubDate>
-	  <guid>//first-post</guid>
+	  <guid>//jekyll-for-blogging</guid>
 	  <description><![CDATA[
-	     <p>This is my first post.
-Today Pei Ngoh not good. Minus marks. Only treat din tai fung, only.</p>
+	     <p>This blog is done in Jekyll. Which is why it seems only fitting to have the first post about Jekyll.</p>
+
+<p>Truth be told, I had never heard of Jekyll until I googled for static site generators. What drew my attention was the fact that it’s written in Ruby. Having used Ruby on Rails before, I wanted to see the difference/similarities between Jekyll and RoR. I didn’t really know what to expect since I have never used a static site generator. But I had some baseline expectations:</p>
+
+<ol>
+  <li>Write markdown</li>
+  <li>Parse it into html</li>
+</ol>
+
+<p>Jekyll met and exceeded my expectations. It somehow organizes all my posts and tags, allowing for easy searching and navigation. I have to dig more into how it’s implemented and the magic behind it. Color me impressed.</p>
 
 	  ]]></description>
 	</item>

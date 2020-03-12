@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <!-- Page Meta -->
-    <title>Finding The Way Home</title>
+    <title>lwx's blog</title>
     <meta name="description" content="I blog here." />
 
     <!-- Mobile Meta -->
@@ -26,31 +26,31 @@
     <style>.hljs { background: none; }</style>
 
     <!-- Ghost outputs important style and meta data with this tag -->
-        <link rel="canonical" href="//" />
+        <link rel="canonical" href="//tag/jwt/" />
     <meta name="referrer" content="origin" />
     <link rel="next" href="/page2/" />
 
     <meta property="og:site_name" content="lwx's blog" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Finding The Way Home" />
+    <meta property="og:title" content="lwx's blog" />
     <meta property="og:description" content="I blog here." />
-    <meta property="og:url" content="//" />
-    <meta property="og:image" content="/assets/images/cover1.jpg" />
+    <meta property="og:url" content="//tag/jwt/" />
+    <meta property="og:image" content="/assets/images/cover2.jpg" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Finding The Way Home" />
+    <meta name="twitter:title" content="lwx's blog" />
     <meta name="twitter:description" content="I blog here." />
-    <meta name="twitter:url" content="//" />
-    <meta name="twitter:image:src" content="/assets/images/cover1.jpg" />
+    <meta name="twitter:url" content="//tag/jwt/" />
+    <meta name="twitter:image:src" content="/assets/images/cover2.jpg" />
 
     <script type="application/ld+json">
 {
     "@context": "http://schema.org",
     "@type": "Website",
     "publisher": "lwx's blog",
-    "name": "Finding The Way Home",
-    "url": "//",
-    "image": "/assets/images/cover1.jpg",
+    "name": "lwx's blog",
+    "url": "//tag/jwt/",
+    "image": "/assets/images/cover2.jpg",
     "description": "I blog here."
 }
     </script>
@@ -60,7 +60,7 @@
 
 
 </head>
-<body class="home-template nav-closed">
+<body class="tag-template nav-closed">
 
     <!-- The blog navigation links -->
     <div class="nav">
@@ -69,7 +69,7 @@
         <span class="hidden">Close</span>
     </a>
     <ul>
-        <li class="nav-home  nav-current" role="presentation"><a href="/">Home</a></li>
+        <li class="nav-home " role="presentation"><a href="/">Home</a></li>
         <li class="nav-about " role="presentation"><a href="/about">About</a></li>
         <li class="nav-author " role="presentation"><a href="/author/lwx">lwx</a></li>
     </ul>
@@ -81,12 +81,14 @@
     <div class="site-wrapper">
 
         <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
-        <!-- < default -->
+        <!-- dynamically overriding backgrounds for tags as well as descriptions -->
+
+
+<!-- default -->
 <!-- The tag above means - insert everything in this file into the [body] of the default.hbs template -->
 
-<!-- The big featured header  -->
-<header class="main-header "
-        style="background-image: url(/assets/images/cover1.jpg) ">
+<!-- If we have a tag cover, display that - else blog cover - else nothing -->
+<header class="main-header tag-head " style="background-image: url(/assets/images/cover2.jpg) ">
     <nav class="main-nav overlay clearfix">
         <a class="blog-logo" href="/"><img src="/assets/images/ghost.png" alt="Blog Logo" /></a>
         
@@ -95,11 +97,14 @@
     </nav>
     <div class="vertical">
         <div class="main-header-content inner">
-            <h1 class="page-title">lwx's blog</h1>
-            <h2 class="page-description">I blog here.</h2>
+            <h1 class="page-title">Jwt</h1>
+            <h2 class="page-description">
+            
+			    A 1-post collection
+            
+            </h2>
         </div>
     </div>
-    <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
 </header>
 
 <!-- The main content area on the homepage -->
@@ -159,37 +164,6 @@
                 
             
             <time class="post-date" datetime="2020-03-12">12 Mar 2020</time>
-        </footer>
-    </article>
-    
-    <article class="post">
-        <header class="post-header">
-            <h2 class="post-title"><a href="/jekyll-for-blogging">Jekyll For Blogging</a></h2>
-        </header>
-        <section class="post-excerpt">
-            <p>This blog is done in Jekyll. Which is why it seems only fitting to have the first post about Jekyll. Truth be told, I had never... <a class="read-more" href="/jekyll-for-blogging">&raquo;</a></p>
-        </section>
-        <footer class="post-meta">
-            
-                
-
-                <img class="author-thumb" src="/assets/images/lwx.jpg" alt="Author image" nopin="nopin" />
-                <!-- author -->
-                <a href='/author/lwx'>lwx</a>
-
-                
-            
-
-            <!-- [[tags prefix=" on "]] -->
-            
-                on
-                
-                    
-                       <a href='/tag/general'>General</a>
-                    
-                
-            
-            <time class="post-date" datetime="2020-03-09">09 Mar 2020</time>
         </footer>
     </article>
     

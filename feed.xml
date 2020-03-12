@@ -8,16 +8,57 @@
     
       
       <item>
-        <title>First Post</title>
+        <title>JWT Authentication in React App (Web)</title>
         
-          <description>&lt;p&gt;This is my first post.
-Today Pei Ngoh not good. Minus marks. Only treat din tai fung, only.&lt;/p&gt;
+          <description>&lt;p&gt;Some thoughts on JWT authentication in a React App.&lt;/p&gt;
+
+&lt;p&gt;I am relatively new to React, I started writing React in September 2019. Having watched a 1-hour crash course on YouTube, I found React to be one of the easiest frontend framework to pick up, especially when compared to Angular.&lt;/p&gt;
+
+&lt;p&gt;I have gotten used to using React for every personal project I build for web. However, recently, I have a project that grew a bit bigger and I was using JWT for authentication. I must admit, I have very little implementational experience regarding JWT and JWT in React. My inital approach was simple, and works for small-scale apps. I would simply check for the presence of a JWT token in every protected component, via a lifecycle method, e.g. useEffect() or componentDidMount().&lt;/p&gt;
+
+&lt;p&gt;This very quickly revealed its flaws, each additional component that requires authentication will require the same (repeated) code, which violates the DRY principle. A bit of reading and I found that the authentication logic can be abstracted by simply wrapping a Route in a closure and performing the auth logic within, with a redirect to a landing page if user is not authenticated.&lt;/p&gt;
+
+&lt;p&gt;I have yet to try it out, but it is quite straightforward and clear that it will work.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;insert&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;some&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sample&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;code&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;here&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Rather, I was thinking, for a SPA, regardless of what authentication method is being used. The user &lt;em&gt;can&lt;/em&gt; actually bypass whatever mechanism is being used, as the logic is completely client-sided. Of course, this might not be an issue, since each endpoint should authenticate the JWT as well. My thoughts are:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Is there a way around it, to prevent user from being able to &lt;em&gt;view&lt;/em&gt; protected pages by spoofing a JWT.&lt;/li&gt;
+  &lt;li&gt;Is it a problem that a user could potentially do the above.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Just to be clear, by spoofing, I really mean an invalid JWT which would fail in server-sided verification but should pass in client-sided checks since the only way the client can check would be to have the secret as well, but it will defeat the purpose of JWT.&lt;/p&gt;
+</description>
+        
+        <pubDate>Thu, 12 Mar 2020 08:00:00 +0800</pubDate>
+        <link>
+        /jwt-authentication-in-react-app</link>
+        <guid isPermaLink="true">/jwt-authentication-in-react-app</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Jekyll For Blogging</title>
+        
+          <description>&lt;p&gt;This blog is done in Jekyll. Which is why it seems only fitting to have the first post about Jekyll.&lt;/p&gt;
+
+&lt;p&gt;Truth be told, I had never heard of Jekyll until I googled for static site generators. What drew my attention was the fact that it’s written in Ruby. Having used Ruby on Rails before, I wanted to see the difference/similarities between Jekyll and RoR. I didn’t really know what to expect since I have never used a static site generator. But I had some baseline expectations:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Write markdown&lt;/li&gt;
+  &lt;li&gt;Parse it into html&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Jekyll met and exceeded my expectations. It somehow organizes all my posts and tags, allowing for easy searching and navigation. I have to dig more into how it’s implemented and the magic behind it. Color me impressed.&lt;/p&gt;
 </description>
         
         <pubDate>Mon, 09 Mar 2020 08:00:00 +0800</pubDate>
         <link>
-        /first-post</link>
-        <guid isPermaLink="true">/first-post</guid>
+        /jekyll-for-blogging</link>
+        <guid isPermaLink="true">/jekyll-for-blogging</guid>
       </item>
       
     
