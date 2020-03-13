@@ -163,7 +163,7 @@ It works.</p>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">Route</span><span class="p">,</span> <span class="nx">Redirect</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">'react-router-dom'</span><span class="p">;</span>
 
 <span class="kd">const</span> <span class="nx">AuthContainer</span> <span class="o">=</span> <span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="mi">1</span> <span class="o">===</span> <span class="mi">2</span>
+    <span class="k">return</span> <span class="nx">isAuthenticated</span><span class="p">()</span>
         <span class="p">?</span>
         <span class="o">&lt;</span><span class="nx">Route</span> <span class="p">{...</span><span class="nx">props</span><span class="p">}</span> <span class="sr">/&gt;</span><span class="err">
 </span>        <span class="p">:</span>
@@ -172,7 +172,7 @@ It works.</p>
 
 <span class="k">export</span> <span class="k">default</span> <span class="nx">AuthContainer</span></code></pre></figure>
 
-<p>1 === 2 is used to simulate auth checking, when 1 === 1, protected route is accessible. When false, a redirect to “/” is returned instead.</p>
+<p>When user is authenticated (true), protected route is accessible. When false, a redirect to “/” is returned instead.</p>
 
 <p>What’s eating me though, is that for a SPA, regardless of what authentication method is being used. The user <em>can</em> actually bypass the mechanism being used, as the logic is completely client-sided. Of course, this might not be an issue, since each endpoint should authenticate the JWT as well. My thoughts are:</p>
 
