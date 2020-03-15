@@ -12,6 +12,94 @@
    <atom:link href="rss" rel="self" type="application/rss+xml" />
    
 	<item>
+	  <title>Web Spinners and Perceived Loading Speed</title>
+	  <link>//web-spinners-and-perceived-loading-speed</link>
+	  <author></author>
+	  <pubDate>2020-03-15T08:00:00+08:00</pubDate>
+	  <guid>//web-spinners-and-perceived-loading-speed</guid>
+	  <description><![CDATA[
+	     <p>Recently I came across quite a prominent site that uses a gif spinner.</p>
+
+<p>Spinners are usually used to indicate loading, and gives the user some feedback regarding the page, otherwise they may leave - thinking that the page failed to load. A gif spinner is just a gif that has some sort of animation that serves as feedback.</p>
+
+<p>While the file size of the gif is relatively small, I cannot help but wonder why the site did not simply use a CSS spinner. It would definitely be faster and looks cleaner too, considering that the gif spinner looked out of place as well, I wonder what are the advantages except for maybe saving some development time by using some existing gifs on the internet.</p>
+
+<p>I used to be tempted by gifs as well, because they can easily accomplish what might take forever (for someone like myself) to do in CSS. I am definitely not well-versed in CSS, and I have been trying to level up my styling skills. After I understood CSS a bit more, I cannot go back to using gifs, especially not for something as simple as a spinner.</p>
+
+<h3 id="a-barebone-spinner-that-i-always-use">A barebone spinner that I always use</h3>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"spinner-container"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"spinner"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.spinner-container</span> <span class="p">{</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+    <span class="nl">justify-content</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+    <span class="nl">margin-top</span><span class="p">:</span> <span class="m">250px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.spinner</span> <span class="p">{</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="m">55px</span><span class="p">;</span>
+    <span class="nl">height</span><span class="p">:</span> <span class="m">55px</span><span class="p">;</span>
+    <span class="nl">border-radius</span><span class="p">:</span> <span class="m">50%</span><span class="p">;</span>
+    <span class="nl">border</span><span class="p">:</span> <span class="m">3px</span> <span class="nb">solid</span> <span class="m">#ccc</span><span class="p">;</span>
+    <span class="nl">border-right</span><span class="p">:</span> <span class="m">3px</span> <span class="nb">solid</span> <span class="no">teal</span><span class="p">;</span>
+    <span class="nl">-webkit-animation</span><span class="p">:</span> <span class="n">spin</span> <span class="m">0.7s</span> <span class="n">linear</span> <span class="n">infinite</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="k">@-webkit-keyframes</span> <span class="n">spin</span> <span class="p">{</span>
+    <span class="nt">0</span><span class="o">%</span> <span class="p">{</span>
+        <span class="nl">-webkit-transform</span><span class="p">:</span> <span class="n">rotate</span><span class="p">(</span><span class="m">0deg</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nt">100</span><span class="o">%</span> <span class="p">{</span>
+        <span class="nl">-webkit-transform</span><span class="p">:</span> <span class="n">rotate</span><span class="p">(</span><span class="m">360deg</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Of course, one should always add in the default properties in addition to vendor-specific properties like -webkit, -moz, I leave that to you.</p>
+
+<p>The effect is this:</p>
+<div class="spinner-container">
+        <div class="spinner"></div>
+</div>
+<style>
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.spinner {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 3px solid #ccc;
+    border-right: 3px solid teal;
+    -webkit-animation: spin 0.7s linear infinite;
+}
+
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+</style>
+
+<p>And we can make it spin faster or slower by changing the animation duration.</p>
+
+<p>One interesting aspect I have discovered is that a shorter spinning duration does not mean it is perceived to be faster. There is a sweet spot that creates the optimal illusion of the data loading fast, which is in-between a fast and a slower spinning animation. Personally I like a 0.7s duration.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
 	  <title>JWT Authentication in React App (Web)</title>
 	  <link>//jwt-authentication-in-react-app</link>
 	  <author></author>
